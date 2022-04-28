@@ -181,17 +181,14 @@ img {
 }
 
 .header__title {
-  flex: 1;
-
   max-width: 115rem;
-  display: grid;
+  flex: 1;
   grid-template-columns: 3fr 2fr;
+  place-content: center;
+  place-items: start;
   row-gap: 3rem;
-  align-content: center;
-  justify-content: center;
-
-  align-items: start;
-  justify-items: start;
+  display: grid;
+  /*align-items: center;*/
 }
 
 h1 {
@@ -208,7 +205,7 @@ h4 {
 
 .header__img {
   width: 100%;
-  grid-column: 2 / 3;
+  grid-column: 2 / span 3;
   grid-row: 1 / span 4;
 }
 
