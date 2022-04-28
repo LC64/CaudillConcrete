@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: #076ae0;
+  --color-body: rgb(39, 39, 39);
   --color-secondary: #ffcb03;
   --color-tertiary: #ff585f;
   --color-primary-darker: #075dc5;
@@ -28,9 +29,9 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #444;
+  color: var(--color-body);
   line-height: 1.9;
-  background-color: #ffffff;
+  background-color: var(--color-body);
 }
 
 /* GENERAL ELEMENTS */
@@ -97,7 +98,7 @@ body {
 }
 
 p {
-  color: #666;
+  color: #fff;
 }
 
 /* This is BAD for accessibility! Don't do in the real world! */
@@ -127,7 +128,7 @@ img {
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color-body);
 }
 
 .nav__logo {
@@ -149,7 +150,7 @@ img {
 .nav__link:visited {
   font-size: 1.7rem;
   font-weight: bold;
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   display: block;
   transition: all 0.3s;
@@ -199,6 +200,7 @@ h1 {
 h4 {
   font-size: 2.4rem;
   font-weight: 500;
+  color: #fff;
 }
 
 .header__img {
@@ -270,8 +272,8 @@ h4 {
 .operations {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
-
-  background-color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
 .operations__tab-container {
@@ -522,7 +524,7 @@ h4 {
 
 /* SIGNUP */
 .section--sign-up {
-  background-color: #37383d;
+  background-color: black;
   border-top: none;
   border-bottom: 1px solid #444;
   text-align: center;
@@ -546,7 +548,7 @@ h4 {
 /* FOOTER */
 .footer {
   padding: 10rem 3rem;
-  background-color: #37383d;
+  background-color: black;
 }
 
 .footer__nav {
