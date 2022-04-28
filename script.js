@@ -1,5 +1,10 @@
 'use strict';
 
+// The code below is just for Parcel.This will let us update code without triggering an entire page re-load each time
+if (module.hot) {
+  module.hot.accept();
+}
+
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');

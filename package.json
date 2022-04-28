@@ -1,0 +1,23 @@
+{
+  "name": "caudillconcrete",
+  "version": "1.0.0",
+  "description": "concrete construction webpage",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LC64/CaudillConcrete.git"
+  },
+  "author": "Lee Caudill and Logan Caudill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LC64/CaudillConcrete/issues"
+  },
+  "homepage": "https://github.com/LC64/CaudillConcrete#readme",
+  "dependencies": {
+    "parcel": "^2.5.0",
+    "react": "^18.1.0"
+  }
+}
