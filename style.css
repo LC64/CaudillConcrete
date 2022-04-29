@@ -1,18 +1,21 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
 :root {
-  --color-primary: #076ae0;
-  --color-body: rgb(39, 39, 39);
-  --color-secondary: #ffcb03;
-  --color-tertiary: #ff585f;
-  --color-primary-darker: #075dc5;
-  --color-secondary-darker: #ffbb00;
-  --color-tertiary-darker: #fd424b;
+  --color-primary: #5f4c3e;
+  --color-font-main: #9f7430;
+  --color-font-secondary: #d5b872;
+  --color-body: #212425;
+  --color-footer: #171b1e;
+  --color-secondary: #ceca8a;
+  --color-tertiary: #fd777d8f;
+  --color-primary-darker: #4d3d32;
+  --color-secondary-darker: #a28b50;
+  --color-tertiary-darker: #b154598f;
   --color-primary-opacity: #5ec5763a;
   --color-secondary-opacity: #ffcd0331;
   --color-tertiary-opacity: #ff58602d;
-  --gradient-primary: linear-gradient(to top left, #7fb2f0, #076ae0);
-  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-primary: linear-gradient(to top left, #d5b872, #9f7430);
+  --gradient-secondary: linear-gradient(to top left, #171b1e, #5f4c3e);
 }
 
 * {
@@ -29,7 +32,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: var(--color-body);
+  color: var(--color-font-main);
   line-height: 1.9;
   background-color: var(--color-body);
 }
@@ -69,6 +72,7 @@ body {
 .btn {
   display: inline-block;
   background-color: var(--color-primary);
+  color: var(--color-font-secondary);
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
@@ -89,7 +93,7 @@ body {
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-font-secondary);
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -98,7 +102,7 @@ body {
 }
 
 p {
-  color: #fff;
+  color: var(--color-font-main);
 }
 
 /* This is BAD for accessibility! Don't do in the real world! */
@@ -150,7 +154,7 @@ img {
 .nav__link:visited {
   font-size: 1.7rem;
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: var(--color-font-secondary);
   text-decoration: none;
   display: block;
   transition: all 0.3s;
@@ -160,8 +164,8 @@ img {
 .nav__link--btn:visited {
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
-  background-color: var(--color-primary);
-  color: #fff;
+  background-color: var(--color-primary-darker);
+  color: var(--color-font-secondary);
 }
 
 .nav__link--btn:hover,
@@ -200,7 +204,11 @@ h1 {
 h4 {
   font-size: 2.4rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--color-font-main);
+}
+
+h5 {
+  color: var(--color-font-secondary);
 }
 
 .header__img {
@@ -225,6 +233,25 @@ h4 {
   opacity: 0.7;
   transform: scale(1.07, 1.05) skewX(-15deg);
   background-image: var(--gradient-primary);
+}
+
+.highlight__alt {
+  position: relative;
+  color: var(--color-font-secondary);
+}
+
+.highlight__alt::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: var(--gradient-secondary);
 }
 
 /* FEATURES */
@@ -272,8 +299,8 @@ h4 {
 .operations {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color-body);
+  color: var(--color-font-secondary);
 }
 
 .operations__tab-container {
@@ -293,16 +320,25 @@ h4 {
 }
 
 .operations__tab--1 {
+  color: black;
   background-color: var(--color-secondary);
+  margin: 4;
 }
 
 .operations__tab--1:hover {
   background-color: var(--color-secondary-darker);
 }
 
+.operations__tab--2 {
+  color: black;
+  background-color: var(--color-primary);
+  margin: 4;
+}
+
 .operations__tab--3 {
+  color: black;
   background-color: var(--color-tertiary);
-  margin: 0;
+  margin: 4;
 }
 
 .operations__tab--3:hover {
@@ -484,12 +520,13 @@ h4 {
   font-size: 2.25rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  color: var(--color-font-secondary);
 }
 
 .testimonial__text {
   font-size: 1.7rem;
   margin-bottom: 3.5rem;
-  color: #666;
+  color: var(--color-font-main);
 }
 
 .testimonial__author {
@@ -499,6 +536,7 @@ h4 {
   display: grid;
   grid-template-columns: 6.5rem 1fr;
   column-gap: 2rem;
+  color: var(--color-font-secondary);
 }
 
 .testimonial__photo {
@@ -524,7 +562,7 @@ h4 {
 
 /* SIGNUP */
 .section--sign-up {
-  background-color: black;
+  background-color: var(--color-footer);
   border-top: none;
   border-bottom: 1px solid #444;
   text-align: center;
@@ -532,7 +570,7 @@ h4 {
 }
 
 .section--sign-up .section__header {
-  color: #fff;
+  color: var(--color-font-main);
   text-align: center;
 }
 
@@ -548,7 +586,7 @@ h4 {
 /* FOOTER */
 .footer {
   padding: 10rem 3rem;
-  background-color: black;
+  background-color: var(--color-footer);
 }
 
 .footer__nav {
@@ -564,7 +602,7 @@ h4 {
 
 .footer__link {
   font-size: 1.6rem;
-  color: #eee;
+  color: var(--color-font-main);
   text-decoration: none;
 }
 
@@ -592,7 +630,7 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 60rem;
-  background-color: #f3f3f3;
+  background-color: var(--color-footer);
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
