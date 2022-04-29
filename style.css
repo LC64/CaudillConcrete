@@ -1,21 +1,25 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
 :root {
-  --color-primary: #5f4c3e;
-  --color-font-main: #9f7430;
-  --color-font-secondary: #d5b872;
-  --color-body: #212425;
-  --color-footer: #171b1e;
+  --color-primary: #876b5d;
+  --color-font-main: #b08c43;
+  --color-font-secondary: #e1c490;
+  --color-body: #33373d;
+  --color-footer: #172129;
   --color-secondary: #ceca8a;
   --color-tertiary: #fd777d8f;
-  --color-primary-darker: #4d3d32;
+  --color-primary-darker: #55443b;
   --color-secondary-darker: #a28b50;
   --color-tertiary-darker: #b154598f;
   --color-primary-opacity: #5ec5763a;
   --color-secondary-opacity: #ffcd0331;
   --color-tertiary-opacity: #ff58602d;
-  --gradient-primary: linear-gradient(to top left, #d5b872, #9f7430);
-  --gradient-secondary: linear-gradient(to top left, #171b1e, #5f4c3e);
+  --gradient-primary: linear-gradient(to top left, #fff, var(--color-primary));
+  --gradient-secondary: linear-gradient(
+    to top left,
+    var(--color-footer),
+    var(--color-primary)
+  );
 }
 
 * {
@@ -71,8 +75,8 @@ body {
 
 .btn {
   display: inline-block;
-  background-color: var(--color-primary);
-  color: var(--color-font-secondary);
+  background-color: var(--color-primary-darker);
+  color: #fff;
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
@@ -84,7 +88,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--color-primary-darker);
+  background-color: var(--color-primary);
 }
 
 .btn--text {
@@ -93,7 +97,7 @@ body {
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
-  color: var(--color-font-secondary);
+  color: #fff;
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -165,13 +169,13 @@ img {
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
   background-color: var(--color-primary-darker);
-  color: var(--color-font-secondary);
+  color: #fff;
 }
 
 .nav__link--btn:hover,
 .nav__link--btn:active {
   color: inherit;
-  background-color: var(--color-primary-darker);
+  background-color: var(--color-primary);
   color: rgb(209, 209, 209);
 }
 
@@ -192,7 +196,7 @@ img {
   place-items: start;
   row-gap: 3rem;
   display: grid;
-  /*align-items: center;*/
+  /* align-items: center; */
 }
 
 h1 {
@@ -215,6 +219,7 @@ h5 {
   width: 100%;
   grid-column: 2 / span 3;
   grid-row: 1 / span 4;
+  border: 3px solid var(--color-font-secondary);
 }
 
 .highlight {
@@ -264,6 +269,7 @@ h5 {
 
 .features__img {
   width: 100%;
+  border: 3px solid var(--color-font-secondary);
 }
 
 .features__feature {
@@ -299,7 +305,7 @@ h5 {
 .operations {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
-  background-color: var(--color-body);
+  background-color: var(--color-footer);
   color: var(--color-font-secondary);
 }
 
@@ -421,6 +427,7 @@ h5 {
 .slide {
   position: absolute;
   top: 0;
+  /* margin: 2rem; */
   width: 100%;
   height: 50rem;
 
@@ -437,6 +444,11 @@ h5 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.slide__img {
+  border: 3px solid var(--color-font-secondary);
+  width: 100%;
 }
 
 .slider__btn {
@@ -592,12 +604,12 @@ h5 {
 .footer__nav {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 5rem;
 }
 
 .footer__item {
-  margin-right: 4rem;
+  /* margin-right: 4rem; */
 }
 
 .footer__link {
@@ -708,4 +720,23 @@ h5 {
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 150px;
+  width: 200px;
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 200px;
+  width: 150px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
