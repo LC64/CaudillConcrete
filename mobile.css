@@ -1,5 +1,5 @@
 html {
-  font-size: 20%;
+  font-size: 30%;
 }
 
 .section {
@@ -16,7 +16,7 @@ html {
 }
 
 .nav__logo {
-  height: 4.7rem;
+  height: 4rem;
   transition: all 0.3s;
 }
 
