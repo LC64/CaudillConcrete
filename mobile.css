@@ -5,8 +5,32 @@ html {
 .section {
   padding: 3rem 1rem;
   border-top: 1px solid #ddd;
-
+  font-size: 0.5rem;
   transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section__title {
+  max-width: 80rem;
+  margin: 0 auto 6rem auto;
+}
+
+.section__description {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 500;
 }
 
 .nav {
@@ -29,17 +53,26 @@ html {
   margin: 0 0rem;
 }
 
+.features p {
+  font-size: 0.5rem;
+}
+
 .features__img {
   width: 100%;
 }
 
+.features__icon {
+  display: none;
+}
+
 .features__icon svg {
+  display: none;
   height: 2.5rem;
   width: 2.5rem;
 }
 
 .features__header {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
