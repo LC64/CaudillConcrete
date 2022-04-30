@@ -1,41 +1,53 @@
-/* Navigation */
+html {
+  font-size: 20%;
+}
+
+.section {
+  padding: 3rem 1rem;
+  border-top: 1px solid #ddd;
+
+  transition: transform 1s, opacity 1s;
+}
+
 .nav {
-  justify-content: space-around;
+  height: 9rem;
+  width: 100%;
+  padding: 0 0rem;
 }
 
 .nav__logo {
-  height: 2rem;
-}
-
-/* .nav__links {
-
-} */
-
-.nav__item {
-  margin-left: 1rem;
-}
-
-.nav__link:link,
-.nav__link:visited {
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: var(--color-font-secondary);
-  text-decoration: none;
-  display: block;
+  height: 4.7rem;
   transition: all 0.3s;
 }
 
-.nav__link--btn:link,
-.nav__link--btn:visited {
-  padding: 0.8rem 2.5rem;
-  border-radius: 3rem;
-  background-color: var(--color-primary-darker);
-  color: #fff;
+.nav__item {
+  margin-left: 3rem;
 }
 
-.nav__link--btn:hover,
-.nav__link--btn:active {
-  color: inherit;
-  background-color: var(--color-primary);
-  color: rgb(209, 209, 209);
+.features {
+  gap: 0.5rem;
+  margin: 0 0rem;
+}
+
+.features__img {
+  width: 100%;
+}
+
+.features__icon svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.features__header {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial__header {
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+
+.testimonial__text {
+  margin-bottom: 0rem;
 }
