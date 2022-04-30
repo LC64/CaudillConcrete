@@ -1,5 +1,5 @@
 html {
-  font-size: 30%;
+  font-size: 40%;
 }
 
 .section {
@@ -16,12 +16,12 @@ html {
 }
 
 .nav__logo {
-  height: 4rem;
+  height: 3rem;
   transition: all 0.3s;
 }
 
 .nav__item {
-  margin-left: 3rem;
+  margin-left: 1.4rem;
 }
 
 .features {
