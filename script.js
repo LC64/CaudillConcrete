@@ -15,6 +15,7 @@ const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 // Nav
 const nav = document.querySelector('.nav');
+const navLink = document.querySelector('.nav__link');
 // Tabbed Component
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
@@ -135,6 +136,9 @@ const revealSection = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
+
+  // navLink.classList.add('.navHighlight');
+  console.log(entry.target.id);
 
   entry.target.classList.remove('section--hidden');
   observer.unobserve(entry.target);

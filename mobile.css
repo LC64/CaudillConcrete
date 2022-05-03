@@ -33,6 +33,7 @@ html {
   font-weight: 500;
 }
 
+/* NAV */
 .nav {
   height: 9rem;
   width: 100%;
@@ -46,6 +47,12 @@ html {
 
 .nav__item {
   margin-left: 1.4rem;
+}
+
+/* HEADER */
+
+.header__title {
+  display: unset;
 }
 
 .features {

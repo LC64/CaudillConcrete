@@ -179,6 +179,10 @@ img {
   color: rgb(209, 209, 209);
 }
 
+.navHighlight {
+  border-bottom: solid 3px red;
+}
+
 /* HEADER */
 .header {
   padding: 0 3rem;
