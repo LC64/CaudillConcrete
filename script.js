@@ -15,7 +15,6 @@ const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 // Nav
 const nav = document.querySelector('.nav');
-const navLink = document.querySelector('.nav__link');
 // Tabbed Component
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
@@ -52,11 +51,6 @@ btnScrollTo.addEventListener('click', function (e) {
 
 // SUB: ----------------------------------Page Navigation----------------------------
 
-// Event Delegation
-// 1. Add event listener to common parent element
-// 2. Determine what element originated the event
-// 3. Come up with matching strategy, so that the event is only triggered when in an actual link is clicked, and not somewhere else within nav__links
-
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
 
@@ -73,7 +67,6 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
 
-  //Guard clase - an if statement that will return early if nothing matches
   if (!clicked) return;
 
   //Remove Active Classes
@@ -129,56 +122,6 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 headerObserver.observe(header);
 
-//SUB:--------------------Revealing Elements on Scroll-----------------------
-const allSections = document.querySelectorAll('.section');
-
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-
-  // navLink.classList.add('.navHighlight');
-  console.log(entry.target.id);
-
-  entry.target.classList.remove('section--hidden');
-  observer.unobserve(entry.target);
-};
-
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.15,
-});
-
-allSections.forEach(function (section) {
-  sectionObserver.observe(section);
-  // section.classList.add('section--hidden');
-});
-
-//SUB:---------------------- Lazy Loading Images -----------------------------
-const imgTargets = document.querySelectorAll('img[data-src]');
-
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener('load', function () {
-    entry.target.classList.remove('lazy-img');
-  });
-
-  observer.unobserve(entry.target);
-};
-
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  treshold: 0,
-  rootMargin: '200px',
-});
-
-imgTargets.forEach(img => imgObserver.observe(img));
-
 //SUB:----------------------------Slider------------------------------------
 const slider = function () {
   const slides = document.querySelectorAll('.slide');
@@ -190,24 +133,24 @@ const slider = function () {
   const maxSlide = slides.length;
 
   // Functions
-  const createDots = function () {
-    slides.forEach(function (_, i) {
-      dotContainer.insertAdjacentHTML(
-        'beforeend',
-        `<button class="dots__dot" data-slide="${i}"></button>`
-      );
-    });
-  };
+  // const createDots = function () {
+  //   slides.forEach(function (_, i) {
+  //     dotContainer.insertAdjacentHTML(
+  //       'beforeend',
+  //       `<button class="dots__dot" data-slide="${i}"></button>`
+  //     );
+  //   });
+  // };
 
-  const activateDot = function (slide) {
-    document
-      .querySelectorAll('.dots__dot')
-      .forEach(dot => dot.classList.remove('dots__dot--active'));
+  // const activateDot = function (slide) {
+  //   document
+  //     .querySelectorAll('.dots__dot')
+  //     .forEach(dot => dot.classList.remove('dots__dot--active'));
 
-    document
-      .querySelector(`.dots__dot[data-slide="${slide}"]`)
-      .classList.add('dots__dot--active');
-  };
+  //   document
+  //     .querySelector(`.dots__dot[data-slide="${slide}"]`)
+  //     .classList.add('dots__dot--active');
+  // };
 
   const goToSlide = function (slide) {
     slides.forEach(
@@ -224,7 +167,7 @@ const slider = function () {
     }
 
     goToSlide(curSlide);
-    activateDot(curSlide);
+    // activateDot(curSlide);
   };
 
   // Previous Slide
@@ -236,13 +179,13 @@ const slider = function () {
     }
 
     goToSlide(curSlide);
-    activateDot(curSlide);
+    // activateDot(curSlide);
   };
 
   const init = function () {
     goToSlide(0);
-    createDots();
-    activateDot(0);
+    // createDots();
+    // activateDot(0);
   };
   init();
 
@@ -255,13 +198,12 @@ const slider = function () {
     e.key === 'ArrowRight' && nextSlide();
   });
 
-  dotContainer.addEventListener('click', function (e) {
-    if (e.target.classList.contains('dots__dot')) {
-      //const slide = e.target.dataset.slide; - w/ destructuring we can write this as...
-      const { slide } = e.target.dataset;
-      goToSlide(slide);
-      activateDot(slide);
-    }
-  });
+  // dotContainer.addEventListener('click', function (e) {
+  //   if (e.target.classList.contains('dots__dot')) {
+  //     const { slide } = e.target.dataset;
+  //     goToSlide(slide);
+  //     activateDot(slide);
+  //   }
+  // });
 };
 slider();
