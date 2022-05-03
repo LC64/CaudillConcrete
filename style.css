@@ -151,7 +151,7 @@ img {
 }
 
 .nav__item {
-  margin-left: 4rem;
+  margin-left: 2.5rem;
 }
 
 .nav__link:link,
@@ -175,8 +175,14 @@ img {
 .nav__link--btn:hover,
 .nav__link--btn:active {
   color: inherit;
-  background-color: var(--color-primary);
+  background-color: var(--color-footer);
   color: rgb(209, 209, 209);
+}
+
+.nav__spacer {
+  color: #fff;
+  font-size: 2rem;
+  margin-left: 2.5rem;
 }
 
 /* HEADER */

@@ -41,12 +41,16 @@ html {
 }
 
 .nav__logo {
-  height: 3rem;
+  height: 2.5rem;
   transition: all 0.3s;
 }
 
 .nav__item {
-  margin-left: 1.4rem;
+  margin-left: 0.5rem;
+}
+
+.nav__spacer {
+  margin-left: 0.5rem;
 }
 
 /* HEADER */
