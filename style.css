@@ -140,7 +140,7 @@ img {
 }
 
 .nav__logo {
-  height: 6rem;
+  height: 100%;
   transition: all 0.3s;
 }
 
@@ -284,6 +284,11 @@ h5 {
 }
 
 .features__img {
+  width: 100%;
+  border: 2px solid var(--color-font-secondary);
+}
+
+.colorChart {
   width: 100%;
   border: 2px solid var(--color-font-secondary);
 }

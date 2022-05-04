@@ -64,6 +64,10 @@ html {
   align-items: center;
 }
 
+/* .header h1 {
+  font-size: 6rem;
+} */
+
 .header h4 {
   font-size: 4rem;
 }
@@ -80,6 +84,11 @@ html {
 
 .features p {
   font-size: 2rem;
+  display: none;
+}
+
+.features h5 {
+  display: none;
 }
 
 .features__img {
