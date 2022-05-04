@@ -5,6 +5,7 @@
   --color-font-main: #b08c43;
   --color-font-secondary: #e1c490;
   --color-body: #33373d;
+  --color-body-darker: #292c31;
   --color-footer: #172129;
   --color-secondary: #ceca8a;
   --color-tertiary: #fd777d8f;
@@ -131,6 +132,7 @@ img {
   width: 100%;
   padding: 0 6rem;
   z-index: 100;
+  /* background-color: var(--color-body); */
 }
 
 /* nav and stickly class at the same time */
@@ -342,7 +344,7 @@ h5 {
 .operations {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
-  background-color: var(--color-footer);
+  /* background-color: var(--color-body-darker); */
   color: var(--color-font-secondary);
 }
 
@@ -448,6 +450,12 @@ h5 {
 }
 .operations__icon--3 svg {
   fill: var(--color-tertiary);
+}
+
+.tab__img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-font-main);
 }
 
 /* SLIDER */
