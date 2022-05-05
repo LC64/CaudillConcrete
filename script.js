@@ -245,3 +245,30 @@ const highlight = function () {
   }
 };
 highlight();
+
+// SUB: ------------------------------- Submit Modal Form ----------------------------------
+
+const submitModal = function () {
+  var form = document.getElementById('modal_form');
+
+  form.addEventListener('submit', event => {
+    var first_name = form['first_name_field'].value;
+    var last_name = form['last_name_field'].value;
+    var phone_number = form['phone_field'].value;
+
+    form.action =
+      'mailto:logan.caudill.92@gmail.com?subject=Services Inquiry&body=' +
+      'Hello, my name is ' +
+      first_name +
+      ' ' +
+      last_name +
+      ' and I would like to get an estimate on a pour. ' +
+      'Please call ' +
+      phone_number +
+      ' at your earliest convenience. Thank you!';
+
+    form.reset();
+    closeModal();
+  });
+};
+submitModal();

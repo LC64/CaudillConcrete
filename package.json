@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/LC64/CaudillConcrete#readme",
   "dependencies": {
+    "netlify": "^11.0.1",
     "parcel": "^2.5.0",
     "react": "^18.1.0"
   }
