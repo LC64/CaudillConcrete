@@ -207,3 +207,41 @@ const slider = function () {
   // });
 };
 slider();
+
+// SUB: ---------------------- Highlight NavLink on Page Scroll ----------------------
+
+const highlight = function () {
+  // variable to store all page sections
+  const sections = document.querySelectorAll('section[id]');
+
+  // event listener for mouse scroll
+  window.addEventListener('scroll', navHighlighter);
+
+  /*
+    - loops through each section to find current section
+    - if the current section is found:
+        - add the 'active' class to highlight corresponding navlink
+    - otherwise:
+        - remove the 'active' class to un-highlight navlink
+  */
+  function navHighlighter() {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 50;
+      let sectionId = current.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        document
+          .querySelector('.nav a[href*=' + sectionId + ']')
+          .classList.add('active');
+      } else {
+        document
+          .querySelector('.nav a[href*=' + sectionId + ']')
+          .classList.remove('active');
+      }
+    });
+  }
+};
+highlight();

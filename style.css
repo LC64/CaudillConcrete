@@ -800,3 +800,9 @@ iframe {
   content: '• ';
   padding-left: 0.1rem;
 }
+
+.active {
+  /* not sure which color looks better */
+  /* border-bottom: 3px solid white; */
+  border-bottom: 3px solid var(--color-font-secondary);
+}
