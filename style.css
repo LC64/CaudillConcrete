@@ -344,7 +344,7 @@ h5 {
 .operations {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
-  /* background-color: var(--color-body-darker); */
+  background-color: var(--color-body-darker);
   color: var(--color-font-secondary);
 }
 
